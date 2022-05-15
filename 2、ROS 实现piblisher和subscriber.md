@@ -14,30 +14,30 @@ publisher.cpp：
 	#include <geometry_msgs/Twist.h>	
 	int main(int argc, char *argv[])
 	{
-	// ros node init
-	ros::init(argc, argv, "Publisher");
-	
-	// create handle
-	ros::NodeHandle n;
-	
-	ros::Publisher trutle_vel_pub = n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel", 10);
-	
-	ros::Rate loop_rate(10);
-	
-	int count = 0;
-	
-	   while (ros::ok()) {
-	   geometry_msgs::Twist vel_msg;
-	   vel_msg.linear.x = 0.5;
-	   vel_msg.angular.z = 0.2;
-	
-	   trutle_vel_pub.publish(vel_msg);
-	   ROS_INFO("Publish turtle velovity command[%0.2f m/s, %0.2f rad/s]", vel_msg.linear.x, vel_msg.angular.z);
-	
-	   loop_rate.sleep();
-	   }
-	
-	return 0;
+		// ros node init
+		ros::init(argc, argv, "Publisher");
+		
+		// create handle
+		ros::NodeHandle n;
+		
+		ros::Publisher trutle_vel_pub = n.advertise<geometry_msgs::Twist>("/turtle1/cmd_vel", 10);
+		
+		ros::Rate loop_rate(10);
+		
+		int count = 0;
+		
+		   while (ros::ok()) {
+		   geometry_msgs::Twist vel_msg;
+		   vel_msg.linear.x = 0.5;
+		   vel_msg.angular.z = 0.2;
+		
+		   trutle_vel_pub.publish(vel_msg);
+		   ROS_INFO("Publish turtle velovity command[%0.2f m/s, %0.2f rad/s]", vel_msg.linear.x, vel_msg.angular.z);
+		
+		   loop_rate.sleep();
+		   }
+		
+		return 0;
 	}
 
 subcriber.cpp ：
@@ -65,7 +65,7 @@ subcriber.cpp ：
 ## 3、声明可执行文件、指定链接库
 
 执行：
->
+
 	vim ~/workspace/catkin_01/src/learning_topic/CMakeLists.txt
 
 添加
@@ -92,12 +92,12 @@ subcriber.cpp ：
 ## 5、运行节点
 
 执行：
-	
-	rosrun learning_topic publisher 
+
+	roscore	 
 
 打开新的终端执行：
 	
-	roscore
+	rosrun learning_topic publisher
 
 打开新的终端执行：
 	
