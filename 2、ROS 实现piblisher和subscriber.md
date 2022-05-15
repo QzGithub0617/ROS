@@ -103,7 +103,7 @@ subcriber.cpp ：
 	
 	rosrun turtlesim turtlesim_node
 
-此时可以看到小乌龟正在移动，表示turtlesim_node节点成功接收到publisher节点发出的消息
+此时可以看到小乌龟正在移动，表示turtlesim_node节点成功订阅到publisher节点发布的消息
 	
 ![](2/3.png)
 
