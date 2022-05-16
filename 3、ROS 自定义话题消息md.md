@@ -2,7 +2,7 @@
 # 自定义消息 #
 ## 1、创建.msg文件 ##
 	
-	cd ~/workspace/catkin_ws-old/src/learning_topic
+	cd ~/workspace/catkin_01/src/learning_topic
 	mkdir msg
 	cd msg
 	vim Person.msg
