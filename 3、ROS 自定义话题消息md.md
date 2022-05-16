@@ -199,5 +199,7 @@
 
 ![](3/9.png)
 
+若出现not found，添加环境变量source xx/workspace/catkin_01/devel/setup.bash，其中xx为工作空间目录
+
 
 
