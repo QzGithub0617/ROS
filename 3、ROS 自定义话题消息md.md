@@ -91,7 +91,7 @@
 进入节点的src目录
 	cd  ~/workspace/catkin_01/src/learning_topic/src
 
-新建 `person_publisher.cpp`，复制下面的代码到更改文件内
+新建 `person_publisher.cpp`，复制下面的代码到该文件内
 
     #include <ros/ros.h>
 	#include "learning_topic/Person.h"
@@ -131,7 +131,7 @@
 
 ## 2、新建subcriber ##
 
-新建 `person_subcriber.cpp`，复制下面的代码到更改文件内
+新建 `person_subcriber.cpp`，复制下面的代码到该文件内
 	
 	#include <ros/ros.h>
 	#include "learning_topic/Person.h"
